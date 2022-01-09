@@ -24,7 +24,6 @@ const Todolist: React.FC<TodolistProps> = (todo, props) => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
-    console.log(e.target.value);
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -40,7 +39,6 @@ const Todolist: React.FC<TodolistProps> = (todo, props) => {
     //   id: newJob.id,
     //   jobName: input,
     // };
-    console.log(newJob.id);
     setJob([...job, newJob]);
   };
 
