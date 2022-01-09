@@ -108,6 +108,9 @@ body {
   }
 }
 * {
+  word-wrap: break-word;
+  -webkit-word-wrap: break-word;
+
   --curve: 40;
   box-sizing: border-box;
   scroll-behavior: smooth;
