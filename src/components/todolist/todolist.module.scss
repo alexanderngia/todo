@@ -1,0 +1,99 @@
+@import "/src/assets/styles/mixin.module.scss";
+@import "/src/assets/styles/variables.module.scss";
+.root {
+  @include flex();
+  flex-direction: column;
+  background-color: $color-black;
+  height: auto;
+  width: 90%;
+  border-radius: 15px;
+  border: 0px solid;
+  padding: 40px 20px;
+  @include desktop {
+    width: 60%;
+  }
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 2rem;
+  line-height: 2em;
+  font-family: $font;
+}
+
+.container {
+  @include flex();
+  width: 60%;
+  height: 100px;
+}
+.input {
+  width: 60%;
+  padding: 20px;
+  color: $color-white;
+  background: $color-black;
+  border: 4px solid $color-blue;
+  border-right: 0px;
+  border-radius: 10px 0px 0px 10px;
+  font-size: 1rem;
+}
+.btn {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+  padding: 20px 45px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: $color-white;
+  font-family: $font;
+  border: 3px solid $color-blue;
+  border-left: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.todos {
+  width: 80%;
+  li {
+    @include flex();
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    color: $color-white;
+    font-family: $font;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+}
+
+.job-edit {
+  @include flex();
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    background-color: $color-white;
+    transition: all ease-in-out 0.2s;
+    border-radius: 100%;
+    z-index: 1;
+  }
+  &:hover:before {
+    opacity: 0.8;
+    transform: scale(1.5);
+  }
+  img {
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    color: $color-white;
+    z-index: 2;
+  }
+}
